@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit Artikel</title>
+</head>
+<body>
+    <h1>Submit Artikel</h1>
+    <form action="#" th:action="@{/submit}" th:object="${artikel}" method="post">
+        <label for="judulArtikel">Judul Artikel:</label>
+        <input type="text" id="judulArtikel" th:field="*{judulArtikel}" /><br/><br/>
+        <label for="content">Content:</label><br/>
+        <textarea id="content" th:field="*{content}"></textarea><br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

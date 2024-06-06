@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Daftar Artikel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>Daftar Artikel</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Judul Artikel</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="artikel : ${artikels}">
+                <td th:text="${artikel.judulArtikel}"></td>
+                <td th:text="${artikel.content}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <a href="/submit">Submit Artikel Baru</a>
+</body>
+</html>
